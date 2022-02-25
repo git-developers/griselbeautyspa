@@ -1,0 +1,55 @@
+{{ form_start(form) }}
+<div class="card-body">
+
+    {{ form_errors(form) }}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.productCategory) }}
+                {{ form_widget(form.productCategory, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.description) }}
+                {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.price) }}
+                {{ form_widget(form.price, {'attr': {'class': 'form-control'}}) }}
+                <div class="form-error text-danger">
+                    {{ form_errors(form.price) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.isActive) }}
+                <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate bootstrap-switch-on bootstrap-switch-focused">
+                    <div class="bootstrap-switch-container">
+                        {{ form_widget(form.isActive, {'attr': {'data-bootstrap-switch': ''}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-footer">
+    <button class="btn btn-sm {{ button_class|default('btn-success') }} pull-right">
+        {{ button_label|default('Save') }}
+    </button>
+</div>
+{{ form_end(form) }}

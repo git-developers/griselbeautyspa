@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+    <!-- Google Webmaster Tool -->
+    <meta name="google-site-verification" content="B4QFWpUw8F6hGAc84cqdtbLwMoxtbOAiJ5FDtFj-Sag" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Montserrat:400,700|Open+Sans:300,400,600,700|Raleway:100,300,400,600,700" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.2' type='text/css' media='all' />
+
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/style.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/style.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/icons.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/tooltipster.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/tooltipster-light.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/animations.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/styles.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/responsive.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/contact-form-styles.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/bootstrap.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/angel/font-awesome.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/owl.carousel.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/angel-child/style.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/elementor/elementor-icons.min.css') }}' type='text/css' media='all' />
+
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/animations.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/frontend.min.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/global.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ asset('build/frontend/css/post-2224.css') }}' type='text/css' media='all' />
+
+    {#
+
+    {{ encore_entry_link_tags('frontend-style.min') }}
+    {{ encore_entry_link_tags('frontend-style') }}
+    {{ encore_entry_link_tags('frontend-icons') }}
+    {{ encore_entry_link_tags('frontend-tooltipster') }}
+    {{ encore_entry_link_tags('frontend-tooltipster-light') }}
+    {{ encore_entry_link_tags('frontend-animations') }}
+    {{ encore_entry_link_tags('frontend-booked-styles') }}
+    {{ encore_entry_link_tags('frontend-responsive') }}
+    {{ encore_entry_link_tags('frontend-contact-form-styles') }}
+    {{ encore_entry_link_tags('frontend-bootstrap.min-css') }}
+    {{ encore_entry_link_tags('frontend-owl.carousel.min-css') }}
+    {{ encore_entry_link_tags('frontend-angel-child-style') }}
+    {{ encore_entry_link_tags('frontend-elementor-icons.min') }}
+    {{ encore_entry_link_tags('frontend-animations.min') }}
+    {{ encore_entry_link_tags('frontend-frontend.min-css') }}
+    {{ encore_entry_link_tags('frontend-global') }}
+    {{ encore_entry_link_tags('frontend-post-2224') }}
+    #}
+    {#
+    <link rel='stylesheet' id='wp-block-library-css'  href='http://angel.iamabdus.com/v1.2/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.16' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-icons-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/css/icons.css?ver=2.2.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/tooltipster/css/tooltipster.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-theme-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/tooltipster/css/themes/tooltipster-light.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-animations-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/css/animations.css?ver=2.2.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-styles-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/css/styles.css?ver=2.2.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-responsive-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/css/responsive.css?ver=2.2.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='angel-bootstrap-css'  href='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/css/bootstrap.min.css?ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='angel-fonts-css'  href='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/css/font-awesome.min.css?ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='owl.carousel.css-css'  href='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/css/owl.carousel.min.css?ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='angel-style-css'  href='http://angel.iamabdus.com/v1.2/wp-content/themes/angel-child/style.css?ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-animations-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-global-css'  href='http://angel.iamabdus.com/v1.2/wp-content/uploads/elementor/css/global.css?ver=1587629172' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-2224-css'  href='http://angel.iamabdus.com/v1.2/wp-content/uploads/elementor/css/post-2224.css?ver=1589923073' type='text/css' media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.12.0' type='text/css' media='all' />
+    <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+    <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    #}
+
+    <style type="text/css" media="screen">
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,body #booked-profile-page input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar thead,body table.booked-calendar thead th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .booked-tabs li.active a,body #booked-profile-page .booked-tabs li.active a:hover,body #booked-profile-page .appt-block .google-cal-button > a:hover,#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header{ background:#0073AA !important; }body #booked-profile-page input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .appt-block .google-cal-button > a:hover{ border-color:#0073AA !important; }body table.booked-calendar tr.days,body table.booked-calendar tr.days th,body .booked-calendarSwitcher.calendar,body #booked-profile-page .booked-tabs,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th{ background:#015e8c !important; }body table.booked-calendar tr.days th,body #booked-profile-page .booked-tabs{ border-color:#015e8c !important; }#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block,body #booked-profile-page .appt-block .google-cal-button > a,body .booked-modal p.booked-title-bar,body table.booked-calendar td:hover .date span,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,.booked-ms-modal .booked-book-appt /* Multi-Slot Booking */{ background:#56C477; }body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body #booked-profile-page .appt-block .google-cal-button > a,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover{ border-color:#56C477; }body .booked-modal .bm-window p i.fa,body .booked-modal .bm-window a,body .booked-appt-list .booked-public-appointment-title,body .booked-modal .bm-window p.appointment-title,.booked-ms-modal.visible:hover .booked-book-appt{ color:#56C477; }.booked-appt-list .timeslot.has-title .booked-public-appointment-title { color:inherit; }
+    </style>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required { visibility: visible; }
+    </style>
+
+    <style type="text/css">
+        .smooth-loader-wrapper .loader img{
+            width: 100%;
+        }
+        .smooth-loader-wrapper {
+            background-color: #f8f8f8;
+        }
+        .post-nav a,
+        .post-nav .page-numbers,
+        .post-nav span,
+        .woocommerce-pagination ul.page-numbers li a,
+        .woocommerce-pagination ul.page-numbers li span,
+        .navigation.post-navigation .nav-links .nav-previous a,
+        .navigation.post-navigation .nav-links .nav-next a,
+        .navigation.posts-navigation .nav-links .nav-previous a,
+        .navigation.posts-navigation .nav-links .nav-next a,
+        .navbar-default .navbar-nav > li.current-menu-item > a {  color: #ec5598    }
+        .btn-primary:link, .btn-primary:visited, .btn-primary:active:focus{
+            background-color: #ec5598;
+        }
+        ::selection {
+            background-color: #ec5598;
+        }
+        .tabs-left .nav li a:hover, .tabs-left .nav li.active a, .tabs-left .nav li.active a:hover, .tabs-left .nav li.active a:focus,
+        .tabs-left .nav li.active a a:active, .homeGallery ul.filter > li.active > a, .homeGallery ul.filter > li > a:hover {
+            border-bottom-color: #ec5598;
+        }
+        .tabs-left .nav li.active a {
+            border-bottom: 1px dashed #ec5598;
+        }
+        .tabTop .nav li.active a, .tabTop .nav li.active a:hover, .tabTop .nav li a:hover {
+            color: #ec5598;
+        }
+        .tabs-left .nav li a:hover, .tabs-left .nav li.active a, .tabs-left .nav li.active a:hover, .tabs-left .nav li.active a:focus,
+        .tabs-left .nav li.active a a:active, .homeGallery ul.filter > li.active > a, .homeGallery ul.filter > li > a:hover {
+            border-bottom-color: #ec5598;
+        }
+        .varietyContent h4{
+            color: #ec5598;
+        }
+        .post-nav .page-numbers.current, .post-nav .page-numbers:hover,
+        .woocommerce-pagination ul.page-numbers li span.current,
+        .woocommerce-pagination ul.page-numbers li a:hover,
+        .woocommerce-pagination ul.page-numbers li span:hover,
+        .navigation.post-navigation .nav-links .nav-previous a:hover,
+        .navigation.post-navigation .nav-links .nav-next a:hover,
+        .navigation.posts-navigation .nav-links .nav-previous a:hover,
+        .navigation.posts-navigation .nav-links .nav-next a:hover,
+        .blogCommnets .media-body .btn-link, .post-comments .comment-form .submit , .backToTop , .pageTitleArea ,
+        .cart_btn a .cart-contents-count , .top-info-bar , .priceTag , .navbar-default .navbar-toggle,
+        .woocommerce .woocommerce-MyAccount-navigation li.is-active a , p.no-comments , .single_add_to_cart_button, .woocommerce-Button,
+        .btn-primary:hover, .wpcf7 input[type='submit']:hover, .single_add_to_cart_button:hover, .woocommerce-Button:hover,
+        .mc4wp-form-fields input[type="submit"] , .shop_table td.actions input[type="submit"] , .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a , .woocommerce .form-row input[type='submit'], .blogSidebar .widget .widget-title, .btn-primary, .wpcf7 input[type='submit'] , .product .woocommerce-tabs .tabs li.active a ,.navbar-default .navbar-toggle:hover ,   ::selection , .onsale , .woocommerce-tabs .tabs li.active a   {
+            background: #ec5598    }
+        .post-nav a,
+        .post-nav .page-numbers,
+        .post-nav span,
+        .post-nav .page-numbers.current, .post-nav .page-numbers:hover,
+        .post-comments .comment-form .submit{
+            border-color: #ec5598;
+        }
+        .footerInfo , .main-menu .sub-menu , .navbar-default .navbar-toggle , .woocommerce .woocommerce-MyAccount-navigation li.is-active a , .mc4wp-form-fields input[type="submit"] , .woocommerce .form-row input[type='submit'] , .blogSidebar .widget .widget-title , .product .woocommerce-tabs .tabs li.active a , .navbar-default .navbar-toggle:hover, .wpcf7 .wpcf7-form-control:not(span):not([type="submit"]):focus, .woocommerce .woocommerce-MyAccount-navigation li.is-active a:hover , .main-slider , .woocommerce-tabs .tabs li.active a{
+            border-color: #ec5598    }
+
+        .main-menu .sub-menu,
+        .footerInfo {
+            border-top-color: #ec5598    }
+        .blogPost h2, .blogPost h2 a , a , .angel-tab .nav-tabs li.active , .reviewInfo .fa-quote-left , .reviewInfo h4 , .expertBox:hover .expertCaption h2, .offerContent .offerPrice h5 , .navbar-default .navbar-nav > li > a:hover , .main-menu .sub-menu li a:hover , .footer-widget .cat-item a:hover , .copyRight .list-inline li a:hover , .copyRightText p a:hover , .required , .post-comments .reply a, .post-comments .edit-link a , .main-slider .owl-carousel .owl-controls .owl-nav .owl-prev, .main-slider .owl-carousel .owl-controls .owl-nav .owl-next, .main-slider .owl-carousel .owl-controls .owl-dot , .secotionTitle h2 span, .productCaption h3 , .product .summary .price , .price ins, .price .woocommerce-Price-amount {
+            color: #ec5598;
+        }
+        .priceTableWrapper:hover .maskImage , .expertMask , .productMask , .offerTitle , .woocommerce-message , .woocommerce-error, .woocommerce-info,.woocommerce-noreviews  {
+            background: rgba(236,85,152,0.7);
+        }
+        .woocommerce-pagination ul.page-numbers li a,
+        .woocommerce-pagination ul.page-numbers li span,
+        .navigation.post-navigation .nav-links .nav-previous a,
+        .navigation.post-navigation .nav-links .nav-next a,
+        .navigation.posts-navigation .nav-links .nav-previous a,
+        .navigation.posts-navigation .nav-links .nav-next a,
+        .team-slider .owl-controls .owl-dots .owl-dot {
+            border-color: #ec5598;;
+            border: 1px solid #ec5598;
+        }
+        .team-slider .owl-controls .owl-dots .owl-dot.active {
+            background-color: #ec5598;
+            width: 13px;
+            height: 13px;
+        }
+        .coupon [name="apply_coupon"], .woocommerce-cart-form [name="update_cart"], button[name='woocommerce_checkout_place_order']{
+            background-color: #ec5598;
+            border: 1px solid #ec5598;
+        }
+        #coupon_code{
+            height: 40px;
+            box-shadow: none;
+            border-radius: 0;
+            padding-left: 18px;
+            border: 1px solid #ec5598;
+            color: #333;
+        }
+        .angel-cta.elementor-element {
+            background-color: #ec5598 !important;
+        }
+        .angel-contact-details {
+            background-color: #ec5598!important;
+        }
+        .profilePersonal .list-unstyled li i.fa{
+            color: #ec5598;
+        }
+        .wpcf7 input[type="submit"]:active:focus,.wpcf7 input[type="submit"]:focus, .wpcf7 input[type="submit"]:active, .footer-widget .wpcf7 input[type="submit"]{
+            background-color: #ec5598;
+            border: 1px solid #ec5598;
+        }
+        .footer-widget .wpcf7 input[type="email"]{
+            border: 1px solid #ec5598;
+        }
+        body table.booked-calendar tr.days, body table.booked-calendar tr.days th, body .booked-calendarSwitcher.calendar,
+        body #booked-profile-page .booked-tabs, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th{
+            background-color: #ec5598 !important;
+        }
+        body table.booked-calendar tr.days th, body #booked-profile-page .booked-tabs{
+            border-color: #ec5598 !important;
+        }
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active, #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover, body #booked-profile-page input[type=submit].button-primary:hover, body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover, body table.booked-calendar input[type=submit].button-primary:hover, body .booked-modal input[type=submit].button-primary:hover, body table.booked-calendar th, body table.booked-calendar thead, body table.booked-calendar thead th, body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover, body #booked-profile-page .booked-profile-header, body #booked-profile-page .booked-tabs li.active a, body #booked-profile-page .booked-tabs li.active a:hover, body #booked-profile-page .appt-block .google-cal-button > a:hover, #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header{
+            background-color: #ec5598 !important;
+        }
+        body #booked-profile-page input[type=submit].button-primary:hover,
+        body table.booked-calendar input[type=submit].button-primary:hover,
+        body .booked-list-view button.button:hover,
+        body .booked-list-view input[type=submit].button-primary:hover,
+        body .booked-modal input[type=submit].button-primary:hover,
+        body table.booked-calendar th,
+        body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+        body #booked-profile-page .booked-profile-header,
+        body #booked-profile-page .appt-block .google-cal-button > a:hover {
+            border-color: #ec5598 !important;
+        }
+        body table.booked-calendar td.today .date span{
+            border-color: #ec5598 !important;
+        }
+        body table.booked-calendar td.today:hover .date span{
+            background: #ec5598 !important;
+        }
+        .blogSidebar .widget .search-form input[type="search"]:focus {
+            border: 1px solid #ec5598    }
+        .post-comments .comment-form textarea:focus, .post-comments .comment-form .comment-form-author input:focus, .post-comments .comment-form .comment-form-email input:focus, .post-comments .comment-form .comment-form-url input:focus {
+            border: 1px solid #ec5598    }
+
+        .home2-pricing-tabel figure.elementor-image-box-img::before {
+            background-image: -webkit-linear-gradient(90deg,rgb(211,16,39) 0%, rgba(236,85,152,0.7) 0%,rgba(255,255,255,0) 50%);
+        }
+        li.home2-price-list span {
+            color: #ec5598    }
+        .homev2-divider .elementor-divider-separator {
+            border-top-color: #ec5598    }
+        .home2-icon-list .elementor-icon-list-item i, .home2-icon-list .elementor-icon-list-item .elementor-icon-list-text, .home2-time-shedule .elementor-image-box-content .elementor-image-box-title, .home2-counterup .elementor-counter-number, .home2-shedule-app .elementor-widget-container .elementor-heading-title, .home2-video-title .elementor-widget-container .elementor-heading-title, .home2-shedule-app .elementor-icon-list-item .elementor-icon-list-text {
+            color: #ec5598    }
+        .homev2-app-clm .elementor-element-populated, .homev2-app-clm .elementor-element-populated::after, .homev2-app-clm .elementor-element-populated::before {
+            border-color: #ec5598    }
+        .star-rating span:before, ul.wc-block-grid__products li.wc-block-grid__product .star-rating span::before, p.stars a:before ,p.stars a:hover ~ a:before ,p.stars:hover a:before, p.stars.selected, a.active:before, p.stars.selected a.active ~ a:before, p.stars.selected a:not(.active):before  {
+            color: #ec5598 !important;
+        }
+        .angel-ct12, .contact-sidebar {
+            background-color: #ec5598 !important;
+        }
+        .per-head-color * {
+            color: #ec5598 !important;
+        }
+    </style>
+
+    <noscript>
+        <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+    </noscript>
+
+    <style type="text/css">
+        .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+    </style>
+
+
+    {#
+    <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/angel.iamabdus.com\/v1.2\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+        /*! This file is auto-generated */
+        !function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="" href="http://angel.iamabdus.com/v1.2/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="" href="http://angel.iamabdus.com/v1.2/comments/feed/" />
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='https://api.w.org/' href='http://angel.iamabdus.com/v1.2/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://angel.iamabdus.com/v1.2/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://angel.iamabdus.com/v1.2/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.4.2" />
+    <meta name="generator" content="WooCommerce 4.1.0" />
+    <link rel="canonical" href="http://angel.iamabdus.com/v1.2/" />
+    <link rel='shortlink' href='http://angel.iamabdus.com/v1.2/' />
+    <link rel="alternate" type="application/json+oembed" href="http://angel.iamabdus.com/v1.2/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fangel.iamabdus.com%2Fv1.2%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="http://angel.iamabdus.com/v1.2/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fangel.iamabdus.com%2Fv1.2%2F&#038;format=xml" />
+
+    <link rel="icon" href="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/favicon-1.png" sizes="32x32" />
+    <link rel="icon" href="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/favicon-1.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/favicon-1.png" />
+    <meta name="msapplication-TileImage" content="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/favicon-1.png" />
+
+    <!-- This code is added by WP Analytify (3.0.0) https://analytify.io/downloads/analytify-wordpress-plugin/ !-->
+    <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })
+
+     (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-126052018-1', 'auto');ga('send', 'pageview');
+    </script>
+    <!-- This code is added by WP Analytify (3.0.0) !-->
+    #}
+
+</head>
+
+<body class="home page-template page-template-page-templates page-template-full-width page-template-page-templatesfull-width-php page page-id-2224 theme-angel woocommerce-no-js elementor-default elementor-kit-4884 elementor-page elementor-page-2224" >
+
+{#============= Preloader Setting  ==================#}
+<div id="preloader" class="smooth-loader-wrapper">
+    <div class="loader">
+        <img
+            src="{{ asset('build/images/angel-default-preloader.gif') }}"
+            alt="Loading...">
+    </div>
+</div>
+
+<header class="header">
+
+    {#TOP INFO BAR#}
+    <div class="top-info-bar">
+        <div class="container">
+            <div class="top-bar-right">
+                <ul class="list-inline">
+                    <li class="email_address">
+                        <i class="fa fa-envelope"></i>
+                        <a href="#">mail@gmail.com</a>
+                    </li>
+                    <li class="phone_number">
+                        <i class="fa fa-phone"></i>
+                        <span>+88 0167234</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navigation navbar-default lightHeader navbar" id="menuBar">
+        <div class="container">
+            {#Brand and toggle get grouped for better mobile display#}
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style=""
+                   class="navbar-brand logo"
+                   href="#">
+                    <img
+                        src="http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/images/logo.png"
+                        alt="Angel &#8211; Beauty Spa Saloon WordPress Theme">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="menu-main-container">
+                    <ul id="primary-menu" class="nav navbar-nav menu main-menu navbar-right">
+                        <li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2224 current_page_item menu-item-14">
+                            <a href="#" aria-current="page">Home</a>
+                        </li>
+                        <li id="menu-item-347" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-347">
+                            <a href="#">Services</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176">
+                                    <a href="#">Services</a>
+                                </li>
+                                <li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169">
+                                    <a href="#">Service Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-348" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-348">
+                            <a href="#">Shop</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174">
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li id="menu-item-2353" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-2353">
+                                    <a href="#">Product</a>
+                                </li>
+                                <li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
+                                    <a href="#">Cart</a>
+                                </li>
+                                <li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11">
+                                    <a href="#">Checkout</a>
+                                </li>
+                                <li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10">
+                                    <a href="#">My account</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-175" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-175">
+                            <a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168">
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
+                                    <a href="#">Appointment Form</a>
+                                </li>
+                                <li id="menu-item-2267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2267">
+                                    <a href="#">Booking Calendar</a>
+                                </li>
+                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167">
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-179">
+                                    <a href="#">Team</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166">
+                                            <a href="#">Team Memebers</a>
+                                        </li>
+                                        <li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165">
+                                            <a href="#">Team Member Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-177">
+                                    <a href="#">Gallery</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
+                                            <a href="#">Gallery 4 Columns</a>
+                                        </li>
+                                        <li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164">
+                                            <a href="#">Gallery 3 Columns</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-178">
+                            <a href="#">Docs</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401">
+                                    <a href="#">Angel Installation</a>
+                                </li>
+                                <li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400">
+                                    <a href="#">Demo Content Import</a>
+                                </li>
+                                <li id="menu-item-487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-487">
+                                    <a href="#">Customization</a>
+                                </li>
+                                <li id="menu-item-4961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4961">
+                                    <a href="#">Faq</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {#navbar-collapse#}
+
+            <div class="cart_btn">
+                <a class="cart-contents" href="#" title="View your shopping cart">
+                    <i class="fa fa-shopping-basket"></i>
+                    <span class="cart-contents-count">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="wrapper">
+    <div data-elementor-type="wp-post" data-elementor-id="2224" class="elementor elementor-2224" data-elementor-settings="[]">
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <section class="elementor-element elementor-element-1tzk7xb elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1tzk7xb" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-agcxl32 elementor-column elementor-col-100 elementor-top-column" data-id="agcxl32" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-6kixvjm elementor-widget elementor-widget-slider" data-id="6kixvjm" data-element_type="widget" data-widget_type="slider.default">
+                                            <div class="elementor-widget-container">
+
+                                                <section class="main-slider" data-autoplay="true" data-interval="7000">
+                                                    <div class="inner" style="">
+                                                        <div class="slide slideResize slide1"
+                                                             style="background-image: url('{{ asset('build/images/home-slider-1-1.jpg') }}');">
+                                                            <div class="container">
+                                                                <div class="slide-inner2 common-inner">
+                                                                    <h1 class="h1 from-bottom">Welcome to Angel</h1>
+                                                                    <h4 class="h4 from-bottom">The best place of Mindfullness & Healthy body</h4>
+                                                                    <a href="#" class="btn btn-primary first-btn waves-effect waves-light scale-up">
+                                                                        Buy Now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="slide slideResize slide1"
+                                                             style="background-image: url('{{ asset('build/images/home-slider-2-1.jpg') }}');">
+                                                            <div class="container">
+                                                                <div class="slide-inner2 common-inner">
+                                                                    <h1 class="h1 from-bottom">Skin Care Solution</h1>
+                                                                    <h4 class="h4 from-bottom">We provide best screen care & aging solution</h4>
+                                                                    <a href="#" class="btn btn-primary first-btn waves-effect waves-light scale-up">
+                                                                        Read More
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="slide slideResize slide1"
+                                                             style="background-image: url('{{ asset('build/images/home-slider-3-1.jpg') }}');">
+                                                            <div class="container">
+                                                                <div class="slide-inner3 common-inner">
+                                                                    <h1 class="h1 from-bottom">luxury spa resort</h1>
+                                                                    <h4 class="h4 from-bottom">The real place of Mindfullness & Healthy body</h4>
+                                                                    <a href="#" class="btn btn-primary first-btn waves-effect waves-light scale-up">
+                                                                        More Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="slide slideResize slide1"
+                                                             style="background-image: url('{{ asset('build/images/home-slider-4-1.jpg') }}');">
+                                                            <div class="container">
+                                                                <div class="slide-inner2 common-inner">
+                                                                    <h1 class="h1 from-bottom">Most Beautiful Theme</h1>
+                                                                    <h4 class="h4 from-bottom">Angel is a beautiful theme and easy to customize</h4>
+                                                                    <a href="#" class="btn btn-primary first-btn waves-effect waves-light scale-up">
+                                                                        Buy Now
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-yqnl195 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="yqnl195" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-3lwph5m elementor-column elementor-col-100 elementor-top-column" data-id="3lwph5m" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <section class="elementor-element elementor-element-ki4uaa6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="ki4uaa6" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-no">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-element elementor-element-suodmeu elementor-column elementor-col-50 elementor-inner-column" data-id="suodmeu" data-element_type="column">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-tq5xd6q elementor-widget elementor-widget-image" data-id="tq5xd6q" data-element_type="widget" data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-image">
+                                                                            <img
+                                                                                width="540"
+                                                                                height="400"
+                                                                                src="{{ asset('build/images/home-about-1-1.jpg') }}"
+                                                                                class="attachment-large size-large"
+                                                                                alt=""
+                                                                                srcset="{{ asset('build/images/home-about-1-1.jpg') }} 540w, {{ asset('build/images/home-about-1-1-300x222.jpg') }} 300w"
+                                                                                sizes="(max-width: 540px) 100vw, 540px" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-t7ylsr2 elementor-column elementor-col-50 elementor-inner-column" data-id="t7ylsr2" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-fwvrh4d elementor-widget elementor-widget-heading" data-id="fwvrh4d" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h3 class="elementor-heading-title elementor-size-default">ANGEL LUXURY SPA RESORT</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-uq2bxa4 elementor-widget elementor-widget-text-editor" data-id="uq2bxa4" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-text-editor elementor-clearfix">
+                                                                            <p>Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque Laudantium, Totam Rem Aperiam Eaque Ipsa Quae Ab.</p>
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor nt occaecat cupidatat non proident.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-z1ckw12 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="z1ckw12" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-i00ni8d elementor-column elementor-col-100 elementor-top-column" data-id="i00ni8d" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-2q1kspp elementor-widget elementor-widget-angel-title" data-id="2q1kspp" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2><span>Discover</span>EXCLUSIVE SERVICES</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-1uooezy elementor-widget elementor-widget-angel_tabs" data-id="1uooezy" data-element_type="widget" data-widget_type="angel_tabs.default">
+                                            <div class="elementor-widget-container">
+
+                                                <div class="tabbable tabTop angel-tab">
+                                                    <div class="container-fluid">
+                                                        <div class="tabbable tabs-left row">
+                                                            <ul class="nav nav-tabs col-sm-4 col-xs-12">
+                                                                <li class="active">
+                                                                    <a href="#1" role="tab" data-toggle="tab">
+                                                                        BRAIDS & TWIST <span>$25</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#2" role="tab" data-toggle="tab">
+                                                                        HAIR COLOR <span>$40</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#3" role="tab" data-toggle="tab">
+                                                                        HAIR EXTENSION <span>$19</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#4" role="tab" data-toggle="tab">
+                                                                        CORRECTIVE COLOR <span>$13</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#5" role="tab" data-toggle="tab">
+                                                                        HAIR CUT <span>$48</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#6" role="tab" data-toggle="tab">
+                                                                        PARTIAL FOIL <span>$10</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#7" role="tab" data-toggle="tab">
+                                                                        EXTENSION PER TRACK <span>$40</span>
+                                                                    </a>
+                                                                </li>
+
+                                                                <a href="appointment/" class="btn btn-primary first-btn btn-tab">
+                                                                    Make An Appointment
+                                                                </a>
+                                                            </ul>
+                                                            <div class="tab-content col-sm-8 col-xs-12">
+                                                                <div role="tabpanel" class="tab-pane active" id="1">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone size-full wp-image-43"
+                                                                                 src="{{ asset('build/images/home-spa-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="770"
+                                                                                 height="400" />
+                                                                        </h3>
+                                                                        <h3>BRAIDS &amp; TWIST</h3>
+                                                                        <h4>$25.00 Per Head</h4>
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur ud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="2">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone wp-image-63 size-full"
+                                                                                 src="{{ asset('build/images/variety-6-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </h3>
+                                                                        <h3>HAIR COLOR</h3>
+                                                                        <h4>$40.00 Per Head</h4>
+                                                                        <p>Conostrud dolore magna aliqua. Ut enim ad minim commodo.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="3">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone size-full wp-image-59"
+                                                                                 src="{{ asset('build/images/variety-2-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </h3>
+                                                                        <h3>HAIR EXTENSION</h3>
+                                                                        <h4>$19.00 Per Head</h4>
+                                                                        <p>Amet, niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="4">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone size-full wp-image-60"
+                                                                                 src="{{ asset('build/images/variety-3-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </h3>
+                                                                        <h3>CORRECTIVE COLOR</h3>
+                                                                        <h4>$13.00 Per Head</h4>
+                                                                        <p>Ipsualiquip ex ea commodo.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="5">
+                                                                    <div class="varietyContent">
+                                                                        <p>
+                                                                            <img class="alignnone size-full wp-image-61"
+                                                                                 src="{{ asset('build/images/variety-4-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </p>
+                                                                        <h3>HAIR CUT</h3>
+                                                                        <h4>$48.00 Per Head</h4>
+                                                                        <p>Ipsrcitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="6">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone size-full wp-image-62"
+                                                                                 src="{{ asset('build/images/variety-5-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </h3>
+                                                                        <h3>PARTIAL FOIL</h3>
+                                                                        <h4>$10.00 Per Head</h4>
+                                                                        Sed do eiumollit anim id est laborum.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div role="tabpanel" class="tab-pane" id="7">
+                                                                    <div class="varietyContent">
+                                                                        <h3>
+                                                                            <img class="alignnone size-full wp-image-63"
+                                                                                 src="{{ asset('build/images/variety-6-1.jpg') }}"
+                                                                                 alt=""
+                                                                                 width="1540"
+                                                                                 height="800" />
+                                                                        </h3>
+                                                                        <h3>EXTENSION PER TRACK</h3>
+                                                                        <h4>$40.00 Per Head</h4>
+                                                                        Voluptateuntr sint occaecat cupidatat non proident, sunt in culpa
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-eo26pat elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="eo26pat" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-yrn9j7c elementor-column elementor-col-100 elementor-top-column" data-id="yrn9j7c" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-7jguvaw elementor-widget elementor-widget-price-section" data-id="7jguvaw" data-element_type="widget" data-widget_type="price-section.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="offersSection">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                <div class="offerContent">
+                                                                    <img src="{{ asset('build/images/offer-1-1.jpg') }}" >
+                                                                    <div class="offerMasking">
+                                                                        <div class="offerTitle">
+                                                                            <h4>
+                                                                                <a href="#">SKIN CARE</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="offerPrice">
+                                                                        <h5>$25</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                <div class="offerContent">
+                                                                    <img src="{{ asset('build/images/offer-2-1.jpg') }}" >
+                                                                    <div class="offerMasking">
+                                                                        <div class="offerTitle">
+                                                                            <h4>
+                                                                                <a href="#">BODY MASSAGE</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="offerPrice">
+                                                                        <h5>$45</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                <div class="offerContent">
+                                                                    <img src="{{ asset('build/images/offer-3-1.jpg') }}" >
+                                                                    <div class="offerMasking">
+                                                                        <div class="offerTitle">
+                                                                            <h4>
+                                                                                <a href="#">NAIL CARE</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="offerPrice">
+                                                                        <h5>$15</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                                <div class="offerContent">
+                                                                    <img src="{{ asset('build/images/offer-4-1.jpg') }}" >
+                                                                    <div class="offerMasking">
+                                                                        <div class="offerTitle">
+                                                                            <h4>
+                                                                                <a href="#">BEAUTY CARE</a>
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="offerPrice">
+                                                                        <h5>$55</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-element elementor-element-12n8wsb woo-angel-product elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="12n8wsb" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-a42n4qn elementor-column elementor-col-100 elementor-top-column" data-id="a42n4qn" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-ot0i8dx elementor-widget elementor-widget-angel-title" data-id="ot0i8dx" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2>
+                                                        <span>Natural</span>
+                                                        OUR PRODUCTS
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-k8y3kr6 elementor-widget elementor-widget-woocommerce-products"
+                                             data-id="k8y3kr6"
+                                             data-element_type="widget"
+                                             data-widget_type="woocommerce-products.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="clearfix">
+                                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                                        <div class="produtSingle">
+                                                            <div class="produtImage">
+                                                                <img width="600"
+                                                                     height="549"
+                                                                     src="{{ asset('build/images/product-06-1.jpg') }}"
+                                                                     class="attachment-600x600 size-600x600 wp-post-image"
+                                                                     alt=""
+                                                                     srcset="{{ asset('build/images/product-06-1.jpg') }} 1005w, {{ asset('build/images/product-06-1-600x549.jpg') }} 600w, {{ asset('build/images/product-06-1-300x274.jpg') }} 300w, {{ asset('build/images/product-06-1-768x702.jpg') }} 768w"
+                                                                     sizes="(max-width: 600px) 100vw, 600px" />
+                                                                <div class="productMask">
+                                                                    <a href="?add-to-cart=379"
+                                                                       data-quantity="1"
+                                                                       class="button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                       data-product_id="379"
+                                                                       data-product_sku=""
+                                                                       aria-label="Add &ldquo;Tea Liquid Soap&rdquo; to your cart"
+                                                                       rel="nofollow">
+                                                                        Add to cart
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="productCaption">
+                                                                <h2>
+                                                                    <a href="#">Tea Liquid Soap</a>
+                                                                </h2>
+                                                                <h3 class="price">
+                                                                    <del>
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                            <span class="woocommerce-Price-currencySymbol">&pound;</span>
+                                                                            45.00
+                                                                        </span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                            <span class="woocommerce-Price-currencySymbol">&pound;</span>
+                                                                            40.00
+                                                                        </span>
+                                                                    </ins>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                                        <div class="produtSingle">
+                                                            <div class="produtImage">
+                                                                <img width="600"
+                                                                     height="549"
+                                                                     src="{{ asset('build/images/product-05-1.jpg') }}"
+                                                                     class="attachment-600x600 size-600x600 wp-post-image"
+                                                                     alt=""
+                                                                     srcset="{{ asset('build/images/product-05-1.jpg') }} 1005w, {{ asset('build/images/product-05-1-600x549.jpg') }} 600w, {{ asset('build/images/product-05-1-300x274.jpg') }} 300w, {{ asset('build/images/product-05-1-768x702.jpg') }} 768w"
+                                                                     sizes="(max-width: 600px) 100vw, 600px" />
+                                                                <div class="productMask">
+                                                                    <a href="?add-to-cart=377" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="377" data-product_sku="" aria-label="Add &ldquo;Hand Wash Soap&rdquo; to your cart" rel="nofollow">
+                                                                        Add to cart
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="productCaption">
+                                                                <h2>
+                                                                    <a href="http://angel.iamabdus.com/v1.2/product/hand-wash-soap/">
+                                                                        Hand Wash Soap
+                                                                    </a>
+                                                                </h2>
+                                                                <h3 class="price">
+                                                                    <span class="woocommerce-Price-amount amount">
+                                                                        <span class="woocommerce-Price-currencySymbol">
+                                                                            &pound;
+                                                                        </span>
+                                                                        15.00
+                                                                    </span>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-6 col-xs-12">
+
+                                                        <div class="produtSingle">
+                                                            <div class="produtImage">
+                                                                <img width="600"
+                                                                     height="549"
+                                                                     src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/product-02-1.jpg"
+                                                                     class="attachment-600x600 size-600x600 wp-post-image"
+                                                                     alt=""
+                                                                     srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/product-02-1.jpg 1005w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/product-02-1-600x549.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/product-02-1-300x274.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/09/product-02-1-768x702.jpg 768w" sizes="(max-width: 600px) 100vw, 600px" />
+                                                                <div class="productMask">
+                                                                    <a href="#" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="102" data-product_sku="" aria-label="Add &ldquo;Herbal Hair Removal&rdquo; to your cart" rel="nofollow">
+                                                                        Add to cart
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="productCaption">
+                                                                <h2>
+                                                                    <a href="#">
+                                                                        Herbal Hair Removal
+                                                                    </a>
+                                                                </h2>
+                                                                <h3 class="price">
+                                                                    <del>
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                            <span class="woocommerce-Price-currencySymbol">
+                                                                                &pound;
+                                                                            </span>
+                                                                            25.00
+                                                                        </span>
+                                                                    </del>
+                                                                    <ins>
+                                                                        <span class="woocommerce-Price-amount amount">
+                                                                            <span class="woocommerce-Price-currencySymbol">
+                                                                                &pound;
+                                                                            </span>
+                                                                            20.00
+                                                                        </span>
+                                                                    </ins>
+                                                                </h3>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-9qm9by2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9qm9by2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-7uial5e elementor-column elementor-col-100 elementor-top-column" data-id="7uial5e" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-u53y4ya elementor-widget elementor-widget-angel-title" data-id="u53y4ya" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2>
+                                                        <span>Testimonials</span>
+                                                        CUSTOMER REVIEWS
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-nc2mf1u elementor-widget elementor-widget-testimonial_carousel" data-id="nc2mf1u" data-element_type="widget" data-widget_type="testimonial_carousel.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="reviewSection">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+
+                                                            <div class="col-sm-6 col-xs-12">
+                                                                <div class="row">
+                                                                    <div class="col-sm-9 col-sm-offset-3 col-xs-12 reviewInner">
+                                                                        <div class="reviewImage hidden-xs">
+                                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/testimonial-2-1.jpg" alt=""/>
+                                                                        </div>
+                                                                        <div class="reviewInfo">
+                                                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                                                            <p> Lorem ipsumr quisquam laboriosam eaque vel voluptate. </p>
+                                                                            <h3>Selina Hubb </h3>
+                                                                            <h4>Actress</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6 col-xs-12">
+                                                                <div class="row">
+                                                                    <div class="col-sm-9 col-sm-offset-3 col-xs-12 reviewInner">
+                                                                        <div class="reviewImage hidden-xs">
+                                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/testimonial-1-1.jpg" alt=""/>
+                                                                        </div>
+                                                                        <div class="reviewInfo">
+                                                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                                                            <p>Lorem ipsupudam laboriosam eaque vel voluptate. </p>
+                                                                            <h3>Jane Smith </h3>
+                                                                            <h4>Model</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-hihdkb0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="hihdkb0" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-e3zpkoa elementor-column elementor-col-100 elementor-top-column" data-id="e3zpkoa" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-vha1r2k elementor-widget elementor-widget-angel-title" data-id="vha1r2k" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2>
+                                                        <span>Explore</span>
+                                                        OUR GALLERY
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-8buacee elementor-widget elementor-widget-image-gallery" data-id="8buacee" data-element_type="widget" data-widget_type="image-gallery.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-image-gallery">
+                                                    <div id='gallery-1' class='gallery galleryid-2224 gallery-columns-4 gallery-size-medium_large'>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-1" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-1-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-2" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-2-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="Gallery-3" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-3-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-4" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-4-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-5" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-5-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-6" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-6-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-7" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-7-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class='gallery-item'>
+                                                            <div class='gallery-icon landscape'>
+                                                                <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="8buacee" data-elementor-lightbox-title="gallery-8" data-elementor-lightbox-description="" href='http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1.jpg'>
+                                                                    <img width="640" height="493" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1-768x592.jpg" class="attachment-medium_large size-medium_large" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1-768x592.jpg 768w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1-600x463.jpg 600w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1-300x231.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/gallery-8-1-1.jpg 960w" sizes="(max-width: 640px) 100vw, 640px" />
+                                                                </a>
+                                                            </div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-ubccjbu angel-ct12 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ubccjbu" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-4khqrua elementor-column elementor-col-50 elementor-top-column" data-id="4khqrua" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-tml3yw8 elementor-widget elementor-widget-text-editor" data-id="tml3yw8" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-text-editor elementor-clearfix"><p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-dt31xta elementor-column elementor-col-50 elementor-top-column" data-id="dt31xta" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-wra2cyo elementor-widget elementor-widget-angel-button" data-id="wra2cyo" data-element_type="widget" data-widget_type="angel-button.default">
+                                            <div class="elementor-widget-container">
+                                                <div style="text-align:center">
+                                                    <a href="#pricing" class="btn btn-primary">View Packages</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-d6dee96 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d6dee96" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-c979708 elementor-column elementor-col-100 elementor-top-column" data-id="c979708" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-6b867ee elementor-widget elementor-widget-angel-title" data-id="6b867ee" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2><span>Meet</span>OUR EXPERTS</h2>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-98eef87 elementor-widget elementor-widget-team_section" data-id="98eef87" data-element_type="widget" data-widget_type="team_section.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="team-slider">
+
+
+                                                    <div class="expertBox">
+                                                        <div class="expertImage">
+                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/team-1-1.jpg"
+                                                                 alt=""/>
+                                                            <div class="expertMask">
+                                                                <div class="socialArea">
+                                                                    <ul class="list-inline">
+                                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="expertCaption ">
+                                                            <h2>Linda Smith </h2>
+                                                            <p>Founder, Angel Beauty</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="expertBox">
+                                                        <div class="expertImage">
+                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/team-2-1.jpg"
+                                                                 alt="John Smith"/>
+                                                            <div class="expertMask">
+                                                                <div class="socialArea">
+                                                                    <ul class="list-inline">
+                                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="expertCaption ">
+                                                            <h2>Saggy Overen </h2>
+                                                            <p>Designer</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="expertBox">
+                                                        <div class="expertImage">
+                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/team-4-1.jpg"
+                                                                 alt="John Kim"/>
+                                                            <div class="expertMask">
+                                                                <div class="socialArea">
+                                                                    <ul class="list-inline">
+                                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="expertCaption ">
+                                                            <h2>John Smith </h2>
+                                                            <p>Co Founder</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="expertBox">
+                                                        <div class="expertImage">
+                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/team-3-1.jpg"
+                                                                 alt="Tina Keith"/>
+                                                            <div class="expertMask">
+                                                                <div class="socialArea">
+                                                                    <ul class="list-inline">
+                                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="expertCaption ">
+                                                            <h2>Dany Headway </h2>
+                                                            <p>Beautician</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="expertBox">
+                                                        <div class="expertImage">
+                                                            <img src="http://angel.iamabdus.com/wp-content/uploads/2017/08/team-2-1.jpg"
+                                                                 alt="John Smith"/>
+                                                            <div class="expertMask">
+                                                                <div class="socialArea">
+                                                                    <ul class="list-inline">
+                                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="expertCaption ">
+                                                            <h2>Saggy Overen </h2>
+                                                            <p>Designer</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-ydn508z elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ydn508z" data-element_type="section" id="pricing" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-xll5q9f elementor-column elementor-col-100 elementor-top-column" data-id="xll5q9f" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-ppgrtz3 elementor-widget elementor-widget-angel-title" data-id="ppgrtz3" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2><span>Amazing</span>SERVICES PRICING</h2>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <section class="elementor-element elementor-element-juc5fek elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="juc5fek" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-element elementor-element-5ocx1ww elementor-column elementor-col-25 elementor-inner-column" data-id="5ocx1ww" data-element_type="column">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-mabshsn pricing-table-2 elementor-widget elementor-widget-pricing_table" data-id="mabshsn" data-element_type="widget" data-widget_type="pricing_table.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="priceTableWrapper">
+                                                                            <div class="priceImage" style="background-image: url('http://angel.iamabdus.com/wp-content/uploads/2017/08/pricing-1-1.jpg');">
+                                                                                <div class="maskImage">
+                                                                                    <h3>SPA LIGHT</h3>
+                                                                                </div>
+                                                                                <div class="priceTag">
+                                                                                    <h4>$59</h4>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="priceInfo">
+                                                                                <ul class="list-unstyled">
+                                                                                    <li>Body Hand and Foot Massage</li>
+                                                                                    <li>Nail Cutting And Styling</li>
+                                                                                    <li>Spa Therapy</li>
+                                                                                    <li>Hair Coloring</li>
+                                                                                </ul>
+                                                                                <a href="contact-us/" class="btn btn-primary first-btn">Buy Now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-crp2zjf elementor-column elementor-col-25 elementor-inner-column" data-id="crp2zjf" data-element_type="column">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-zzkkk4w pricing-table-2 elementor-widget elementor-widget-pricing_table" data-id="zzkkk4w" data-element_type="widget" data-widget_type="pricing_table.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="priceTableWrapper">
+                                                                            <div class="priceImage" style="background-image: url('http://angel.iamabdus.com/wp-content/uploads/2017/08/pricing-2-1.jpg');">
+                                                                                <div class="maskImage">
+                                                                                    <h3>SPA Silver</h3>
+                                                                                </div>
+                                                                                <div class="priceTag">
+                                                                                    <h4>$79</h4>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="priceInfo">
+                                                                                <ul class="list-unstyled">
+                                                                                    <li>Body Hand and Foot Massage</li>
+                                                                                    <li>Nail Cutting And Styling</li>
+                                                                                    <li>Spa Therapy</li>
+                                                                                    <li>Hair Coloring</li>
+                                                                                </ul>
+                                                                                <a href="contact-us/" class="btn btn-primary first-btn">Buy Now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-8zceibh elementor-column elementor-col-25 elementor-inner-column" data-id="8zceibh" data-element_type="column">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-fyscfhi pricing-table-2 elementor-widget elementor-widget-pricing_table" data-id="fyscfhi" data-element_type="widget" data-widget_type="pricing_table.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="priceTableWrapper">
+                                                                            <div class="priceImage" style="background-image: url('http://angel.iamabdus.com/wp-content/uploads/2018/09/blog-1.jpg');">
+                                                                                <div class="maskImage">
+                                                                                    <h3>SPA Gold</h3>
+                                                                                </div>
+                                                                                <div class="priceTag">
+                                                                                    <h4>$99</h4>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="priceInfo">
+                                                                                <ul class="list-unstyled">
+                                                                                    <li>Body Hand and Foot Massage</li>
+                                                                                    <li>Nail Cutting And Styling</li>
+                                                                                    <li>Spa Therapy</li>
+                                                                                    <li>Hair Coloring</li>
+                                                                                </ul>
+                                                                                <a href="contact-us/" class="btn btn-primary first-btn">Buy Now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-7gtb28f elementor-column elementor-col-25 elementor-inner-column" data-id="7gtb28f" data-element_type="column">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-1vjo38w pricing-table-2 elementor-widget elementor-widget-pricing_table" data-id="1vjo38w" data-element_type="widget" data-widget_type="pricing_table.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="priceTableWrapper">
+                                                                            <div class="priceImage" style="background-image: url('http://angel.iamabdus.com/wp-content/uploads/2017/08/pricing-3-1-e1510736724815.jpg');">
+                                                                                <div class="maskImage">
+                                                                                    <h3>SPA Platinum</h3>
+                                                                                </div>
+                                                                                <div class="priceTag">
+                                                                                    <h4>$199</h4>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="priceInfo">
+                                                                                <ul class="list-unstyled">
+                                                                                    <li>Body Hand and Foot Massage</li>
+                                                                                    <li>Nail Cutting And Styling</li>
+                                                                                    <li>Spa Therapy</li>
+                                                                                    <li>Hair Coloring</li>
+                                                                                </ul>
+                                                                                <a href="contact-us/" class="btn btn-primary first-btn">Buy Now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-4ruy6wv elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4ruy6wv" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-ltwq9u0 elementor-column elementor-col-100 elementor-top-column" data-id="ltwq9u0" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-jyttq67 elementor-widget elementor-widget-angel-title" data-id="jyttq67" data-element_type="widget" data-widget_type="angel-title.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="secotionTitle">
+                                                    <h2><span>Hurry</span>CONTACT US</h2>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <section class="elementor-element elementor-element-mukgj52 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="mukgj52" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-no">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-element elementor-element-ebvye02 elementor-column elementor-col-50 elementor-inner-column" data-id="ebvye02" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-background-overlay"></div>
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-2d3f636 elementor-widget__width-initial elementor-widget elementor-widget-contact-form-7" data-id="2d3f636" data-element_type="widget" data-widget_type="contact-form-7.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div role="form" class="wpcf7" id="wpcf7-f803-p2224-o1" lang="en-US" dir="ltr">
+                                                                            <div class="screen-reader-response" aria-live="polite"></div>
+                                                                            <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                                                <div style="display: none;">
+                                                                                    <input type="hidden" name="_wpcf7" value="803" />
+                                                                                    <input type="hidden" name="_wpcf7_version" value="5.1.8" />
+                                                                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f803-p2224-o1" />
+                                                                                    <input type="hidden" name="_wpcf7_container_post" value="2224" />
+                                                                                </div>
+                                                                                <p>
+                                                                                    <label> Your Name (required)
+                                                                                        <br />
+                                                                                        <span class="wpcf7-form-control-wrap your-name">
+                                                                                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <label> Your Email (required)
+                                                                                        <br />
+                                                                                        <span class="wpcf7-form-control-wrap your-email">
+                                                                                            <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <label> Subject
+                                                                                        <br />
+                                                                                        <span class="wpcf7-form-control-wrap your-subject">
+                                                                                            <input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <label> Your Message
+                                                                                        <br />
+                                                                                        <span class="wpcf7-form-control-wrap your-message">
+                                                                                            <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+                                                                                        </span>
+                                                                                    </label>
+                                                                                </p>
+                                                                                <p>
+                                                                                    <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" />
+                                                                                </p>
+                                                                                <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true"></div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="elementor-element elementor-element-6m9ajyu contact-sidebar elementor-column elementor-col-50 elementor-inner-column" data-id="6m9ajyu" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                        <div class="elementor-column-wrap  elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-1c0730a elementor-widget elementor-widget-heading" data-id="1c0730a" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h2 class="elementor-heading-title elementor-size-default">Our Story</h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-804ecb8 elementor-widget elementor-widget-divider" data-id="804ecb8" data-element_type="widget" data-widget_type="divider.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-divider">
+                                                                            <span class="elementor-divider-separator"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-33d9d6e elementor-widget elementor-widget-text-editor" data-id="33d9d6e" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-text-editor elementor-clearfix">
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiselit, sed do eiusmod.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-4ad2f23 elementor-view-framed elementor-position-left elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="4ad2f23" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-icon-box-wrapper">
+                                                                            <div class="elementor-icon-box-icon">
+                                                                                <span class="elementor-icon elementor-animation-" >
+                                                                                    <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="elementor-icon-box-content">
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                    <span >Angel Beauty, Victoria Street<br >Sheffield, UK</span>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-140ea9b elementor-view-framed elementor-position-left elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="140ea9b" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-icon-box-wrapper">
+                                                                            <div class="elementor-icon-box-icon">
+                                                                                <span class="elementor-icon elementor-animation-" >
+                                                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="elementor-icon-box-content">
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                    <span >+55 654 545 122  <br>+55 654 545 123</span>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-6cc5c2b elementor-view-framed elementor-position-left elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="6cc5c2b" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-icon-box-wrapper">
+                                                                            <div class="elementor-icon-box-icon">
+                                                                                <span class="elementor-icon elementor-animation-" >
+                                                                                    <i aria-hidden="true" class="far fa-envelope"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="elementor-icon-box-content">
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                    <span >info @example.com  <br>info2@example.com</span>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="elementor-element elementor-element-c2w503o elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c2w503o" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-element elementor-element-jtvkj53 elementor-column elementor-col-100 elementor-top-column" data-id="jtvkj53" data-element_type="column">
+                                <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-thqzny4 elementor-arrows-position-inside elementor-widget elementor-widget-image-carousel" data-id="thqzny4" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;arrows&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;direction&quot;:&quot;ltr&quot;}" data-widget_type="image-carousel.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
+                                                    <div class="elementor-image-carousel swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-1-3-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-2-3-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-3-3-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-4-3-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-1-2-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-2-2-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-3-2-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <figure class="swiper-slide-inner">
+                                                                <img class="swiper-slide-image" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/brand-4-2-1.png" alt="" />
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-swiper-button elementor-swiper-button-prev">
+                                                        <i class="eicon-chevron-left" aria-hidden="true"></i>
+                                                        <span class="elementor-screen-only">Previous</span>
+                                                    </div>
+                                                    <div class="elementor-swiper-button elementor-swiper-button-next">
+                                                        <i class="eicon-chevron-right" aria-hidden="true"></i>
+                                                        <span class="elementor-screen-only">Next</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+{#End Wrapper#}
+
+{#FOOTER#}
+<footer class="footer" style=" background-image: url('http://angel.iamabdus.com/v1.2/wp-content/uploads/2019/10/footer-bg-1-1.jpg');  ">
+    {#BACK TO TOP BUTTON#}
+    <a href="#pageTop" class="backToTop">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </a>
+    {#FOOTER INFO#}
+    <div class="clearfix footerInfo footer_bg_color">
+        <div class="container">
+            <div class="row">
+                <div class="footer-widget widget-area">
+                    <div class="col-sm-3 col-xs-12 widget">
+                        <div class="textwidget">
+                            <p>
+                                <a class="footerLogo" href="http://angel.iamabdus.com/v1.2/">
+                                    <img src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2018/09/logo-footer-1.png" alt="Footer Logo" />
+                                </a>
+                            </p>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa officia.Lorem ipsum dolor sit amet.</p>
+                            <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div><div class="col-sm-3 col-xs-12 widget">
+                        <h4 class="footerInfoTitle">Useful Links</h4>
+                        <div class="menu-useful-links-container">
+                            <ul id="menu-useful-links" class="menu">
+                                <li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121">
+                                    <a title="" href="#">Web Design</a>
+                                </li>
+                                <li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122">
+                                    <a title="" href="#">About Angel Beauty Spa</a>
+                                </li>
+                                <li id="menu-item-123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123">
+                                    <a title="" href="#">Mobile</a>
+                                </li>
+                                <li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124">
+                                    <a title="" href="#">Why Angel Beauty Spa</a>
+                                </li>
+                                <li id="menu-item-125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125">
+                                    <a title="" href="#">Social Media</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12 widget">
+                        <h4 class="footerInfoTitle">Gallery</h4>
+                        <div id='gallery-2' class='gallery galleryid-2224 gallery-columns-3 gallery-size-thumbnail'>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-4-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-4-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-4-1-1-100x100.jpg 100w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-4-1-1.jpg 254w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-2-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-2-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-2-1-1-100x100.jpg 100w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-2-1-1.jpg 254w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-3-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-3-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-3-1-1-100x100.jpg 100w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-3-1-1.jpg 254w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-1-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-1-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-1-1-1-100x100.jpg 100w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/offer-1-1-1.jpg 254w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/home-spa-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/home-spa-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/home-spa-1-1-300x300.jpg 300w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/home-spa-1-1-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                            <figure class='gallery-item'>
+                                <div class='gallery-icon landscape'>
+                                    <img width="150" height="150" src="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/pricing-1-1-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/pricing-1-1-1-150x150.jpg 150w, http://angel.iamabdus.com/v1.2/wp-content/uploads/2017/08/pricing-1-1-1-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 col-xs-12 widget"><h4 class="footerInfoTitle">Newsletter</h4>
+                        <div class="textwidget">
+                            <p>Sign up for our mailing list to get latest updates and offers.</p>
+                            <div role="form" class="wpcf7" id="wpcf7-f344-o2" lang="en-US" dir="ltr">
+                                <div class="screen-reader-response" aria-live="polite"></div>
+                                <form action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="344" />
+                                        <input type="hidden" name="_wpcf7_version" value="5.1.8" />
+                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f344-o2" />
+                                        <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                    </div>
+                                    <p>
+                                        <span class="wpcf7-form-control-wrap email-834">
+                                            <input type="email" name="email-834" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email homev2-newsletter-input" aria-invalid="false" />
+                                        </span>
+                                        <input type="submit" value="subscribe" class="wpcf7-form-control wpcf7-submit homev2-newsletter-submit" />
+                                    </p>
+                                    <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#COPY RIGHT#}
+    <div class="clearfix copyRight">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-sm-push-7 col-xs-12">
+                    <ul class='social-media-icons list-inline socialLink'>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-vimeo-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                    <div class="copyRightText">
+                        <p>© 2020 Grisel Beauty Spa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    {% block javascripts %}
+
+        <script type="text/javascript">
+        var elementorFrontendConfig = {
+            "environmentMode":{
+                "edit":false,
+                "wpPreview":false
+            },
+            "i18n":{
+                "shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it",
+                "downloadImage":"Download image"
+            },
+            "is_rtl":false,
+            "breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},
+            "version":"2.9.8","urls":{"assets":"http:\/\/angel.iamabdus.com\/v1.2\/wp-content\/plugins\/elementor\/assets\/"},
+            "settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes",
+            "elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes",
+            "elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes",
+            "elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},
+            "editorPreferences":[]},
+            "post":{
+                "id":2224,"title":"Angel%20%E2%80%93%20Beauty%20Spa%20Saloon%20WordPress%20Theme",
+                "excerpt":"\n\t\t\t\t\t\t","featuredImage":false
+            }
+        };
+        </script>
+
+        <script src="{{ asset('build/frontend/js/jquery.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/jquery-migrate.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/core.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/datepicker.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/spin.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/spin.jquery.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/jquery.tooltipster.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/functions.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/contact-form-scripts.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/jquery.blockUI.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/cart-fragments.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/custom.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/tilt.jquery.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/wp-embed.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/imagesloaded.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/frontend-modules.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/position.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/dialog.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/swiper.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/share-link.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/frontend.min.js') }}"></script>
+        <script src="{{ asset('build/frontend/js/rocket-loader.min.js') }}"></script>
+
+        {#
+        {{ encore_entry_script_tags('frontend-jquery') }}
+        {{ encore_entry_script_tags('frontend-jquery-migrate.min') }}
+        {{ encore_entry_script_tags('frontend-core.min') }}
+        {{ encore_entry_script_tags('frontend-datepicker.min') }}
+        {{ encore_entry_script_tags('frontend-spin.min') }}
+        {{ encore_entry_script_tags('frontend-spin.jquery') }}
+        {{ encore_entry_script_tags('frontend-jquery.tooltipster.min') }}
+        {{ encore_entry_script_tags('frontend-functions') }}
+        {{ encore_entry_script_tags('frontend-contact-form-scripts') }}
+        {{ encore_entry_script_tags('frontend-jquery.blockUI.min') }}
+        {{ encore_entry_script_tags('frontend-cart-fragments.min') }}
+        {{ encore_entry_script_tags('frontend-bootstrap.min-js') }}
+        {{ encore_entry_script_tags('frontend-owl.carousel.min-js') }}
+        {{ encore_entry_script_tags('frontend-custom') }}
+        {{ encore_entry_script_tags('frontend-tilt.jquery.min') }}
+        {{ encore_entry_script_tags('frontend-wp-embed.min') }}
+        {{ encore_entry_script_tags('frontend-imagesloaded.min') }}
+        {{ encore_entry_script_tags('frontend-frontend-modules.min') }}
+        {{ encore_entry_script_tags('frontend-position.min') }}
+        {{ encore_entry_script_tags('frontend-dialog.min') }}
+        {{ encore_entry_script_tags('frontend-waypoints.min') }}
+        {{ encore_entry_script_tags('frontend-swiper.min') }}
+        {{ encore_entry_script_tags('frontend-share-link.min') }}
+        {{ encore_entry_script_tags('frontend-frontend.min-js') }}
+        {{ encore_entry_script_tags('frontend-rocket-loader.min') }}
+        #}
+
+
+
+        {#
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+            var c = document.body.className;
+            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+            document.body.className = c;
+        </script>
+
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/spin.min.js?ver=2.0.1'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/spin.jquery.js?ver=2.0.1'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        /* <![CDATA[ */
+        var booked_js_vars = {"ajax_url":"http:\/\/angel.iamabdus.com\/v1.2\/wp-admin\/admin-ajax.php","profilePage":"","publicAppointments":"","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_please_wait":"Please wait ...","i18n_wrong_username_pass":"Wrong username\/password combination.","i18n_fill_out_required_fields":"Please fill out all required fields.","i18n_guest_appt_required_fields":"Please enter your name to book an appointment.","i18n_appt_required_fields":"Please enter your name, your email address and choose a password to book an appointment.","i18n_appt_required_fields_guest":"Please fill in all \"Information\" fields.","i18n_password_reset":"Please check your email for instructions on resetting your password.","i18n_password_reset_error":"That username or email is not recognized."};
+        /* ]]> */
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/booked/assets/js/functions.js?ver=2.2.6'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        /* <![CDATA[ */
+        var wpcf7 = {"apiSettings":{"root":"http:\/\/angel.iamabdus.com\/v1.2\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+        /* ]]> */
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.8'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = {"ajax_url":"\/v1.2\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/v1.2\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/angel.iamabdus.com\/v1.2\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+        /* ]]> */
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.1.0'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        /* <![CDATA[ */
+        var woocommerce_params = {"ajax_url":"\/v1.2\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/v1.2\/?wc-ajax=%%endpoint%%"};
+        /* ]]> */
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4.1.0'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = {"ajax_url":"\/v1.2\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/v1.2\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_2831a31258d103e9801982a46f8854ba","fragment_name":"wc_fragments_2831a31258d103e9801982a46f8854ba","request_timeout":"5000"};
+        /* ]]> */
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=4.1.0'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/js/bootstrap.min.js?ver=20120206'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/js/owl.carousel.min.js?ver=20120206'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/js/custom.js?ver=20120206'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/themes/angel/assets/js/tilt.jquery.min.js?ver=20120206'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.8'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.8'></script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript">
+        var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.8","urls":{"assets":"http:\/\/angel.iamabdus.com\/v1.2\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":2224,"title":"Angel%20%E2%80%93%20Beauty%20Spa%20Saloon%20WordPress%20Theme","excerpt":"\n\t\t\t\t\t\t","featuredImage":false}};
+        </script>
+        <script type="e3bf5747daa8d9ed0cade78c-text/javascript" src='http://angel.iamabdus.com/v1.2/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.8'></script>
+        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="e3bf5747daa8d9ed0cade78c-|49" defer=""></script>
+        #}
+
+    {% endblock %}
+
+</body>
+
+
+
+
+</html>

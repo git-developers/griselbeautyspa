@@ -1,0 +1,67 @@
+{{ form_start(form) }}
+<div class="card-body">
+
+    {{ form_errors(form) }}
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="required">Code</label>
+                <input type="text" value="{{ appointment.code }}" class="form-control" readonly>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ form_label(form.staffMember) }}
+                {{ form_widget(form.staffMember, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ form_label(form.xService) }}
+                {{ form_widget(form.xService, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ form_label(form.xDate) }}
+                {{ form_widget(form.xDate, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ form_label(form.periodStart) }}
+                {{ form_widget(form.periodStart, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ form_label(form.periodEnd) }}
+                {{ form_widget(form.periodEnd, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.note) }}
+                {{ form_widget(form.note, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_label(form.customers) }}
+                {{ form_widget(form.customers, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-footer">
+    <button class="btn btn-sm {{ button_class|default('btn-success') }} pull-right">
+        {{ button_label|default('Save') }}
+    </button>
+</div>
+{{ form_end(form) }}

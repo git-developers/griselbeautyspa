@@ -1,0 +1,156 @@
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-header">MENUS</li>
+        <li class="nav-item">
+            <a href="{{ path('index') }}" class="nav-link">
+                <i class="fa fa-desktop"></i>
+                <p>
+                    Frontend
+                    <span class="badge badge-info right">2</span>
+                </p>
+            </a>
+        </li>
+        <li class="nav-item has-treeview {% if app.request.get('_route')
+            matches '(
+            |product_index|product_new|product_show|product_edit|
+            |product_category_index|product_category_new|product_category_show|product_category_edit)' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if app.request.get('_route')
+                matches '(
+                |product_index|product_new|product_show|product_edit|
+                |product_category_index|product_category_new|product_category_show|product_category_edit)' %}active{% endif %}">
+                <i class="fa fa-cube"></i>
+                <p>
+                    Products
+                    <i class="fa fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ path('product_category_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-sitemap text-info"></i>
+                        <p>Category</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('product_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-warning"></i>
+                        <p>List Products</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('product_new') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-success"></i>
+                        <p>New Product</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item has-treeview {% if app.request.get('_route')
+            matches '(
+            |xservice_category_index|xservice_index|xservice_new|xservice_edit|xservice_show)' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if app.request.get('_route')
+                matches '(xservice_category_index|xservice_index|xservice_new|xservice_edit|xservice_show)' %}active{% endif %}">
+                <i class="fa fa-diamond"></i>
+                <p>
+                    Services
+                    <i class="fa fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ path('xservice_category_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-sitemap text-info"></i>
+                        <p>Category</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('xservice_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-warning"></i>
+                        <p>List Services</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('xservice_new') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-success"></i>
+                        <p>New Service</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item has-treeview {% if app.request.get('_route')
+            matches '(customer_index|customer_new|customer_edit|customer_show)' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if app.request.get('_route')
+                matches '(customer_index|customer_new|customer_edit|customer_show)' %}active{% endif %}">
+                <i class="fa fa-user-circle-o"></i>
+                <p>
+                    Customers
+                    <i class="fa fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ path('customer_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-warning"></i>
+                        <p>List</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('customer_new') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-success"></i>
+                        <p>Create New</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item has-treeview {% if app.request.get('_route')
+            matches '(staff_member_index|staff_member_new|staff_member_show|staff_member_edit|staff_member_delete)' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if app.request.get('_route')
+                matches '(staff_member_index|staff_member_new|staff_member_show|staff_member_edit|staff_member_delete)' %}active{% endif %}">
+                <i class="fa fa-user-o"></i>
+                <p>
+                    Staff Members
+                    <i class="fa fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ path('staff_member_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-warning"></i>
+                        <p>List</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('staff_member_new') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-success"></i>
+                        <p>Create New</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item has-treeview {% if app.request.get('_route')
+            matches '(appointment_index|appointment_new|appointment_show|appointment_edit)' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if app.request.get('_route')
+                matches '(appointment_index|appointment_new|appointment_show|appointment_edit)' %}active{% endif %}">
+                <i class="fa fa-calendar-check-o"></i>
+                <p>
+                    Booking
+                    <i class="fa fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ path('xservice_category_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-calendar text-info"></i>
+                        <p>Calendar</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('appointment_index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-circle-o text-warning"></i>
+                        <p>Appointments</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

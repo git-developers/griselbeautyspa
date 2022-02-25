@@ -1,0 +1,34 @@
+index:
+    path: /
+    controller: App\Controller\FrontendController::index
+
+frontend_appointment:
+    resource: App\Controller\AppointmentFrontendController
+    type: annotation
+    prefix: /frontend
+
+backend_product:
+    resource: App\Controller\ProductController
+    type: annotation
+    prefix: /backend
+    #name_prefix: api_
+
+backend_product_category:
+    resource: App\Controller\ProductCategoryController
+    type: annotation
+    prefix: /backend
+
+backend_customer:
+    resource: App\Controller\CustomerController
+    type: annotation
+    prefix: /backend
+
+backend_staff_member:
+    resource: App\Controller\StaffMemberController
+    type: annotation
+    prefix: /backend
+
+backend_appointment:
+    resource: App\Controller\AppointmentController
+    type: annotation
+    prefix: /backend
